@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(to right, #56CCF2, #2F80ED); /* Gradient background */
+    font-family: sans-serif;
+    outline: none;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator {
+    background: linear-gradient(to right, #56CCF2, #2F80ED); /* Gradient background */
+    padding: 15px;
+    border-radius: 30px;
+    box-shadow: 10px 10px 20px #D1D9E6, -10px -10px 20px #ffffff;
+    display: grid;
+    grid-template-columns: repeat(4, 68px);
+}
+
+input {
+    transition: background-color 0.3s ease, color 0.3s ease;
+    white-space: nowrap;
+    overflow: hidden;
+    grid-column: span 4;
+    height: 70px;
+    width: 260px;
+    background: linear-gradient(to right, #56CCF2, #2F80ED); /* Gradient background */
+    box-shadow: inset -5px -5px 12px #ffffff, inset 5px 5px 12px rgba(0, 0, 0, .16);
+    border: none;
+    border-radius: 30px;
+    color: #333;
+    font-size: 50px;
+    text-align: end;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+button {
+    height: 48px;
+    width: 48px;
+    background: linear-gradient(to right, #56CCF2, #2F80ED); /* Gradient background */
+    box-shadow: inset -5px -5px 12px #ffffff, 5px 5px 12px rgba(0, 0, 0, .16);
+    border: none;
+    border-radius: 50%;
+    margin: 8px;
+    font-size: 16px;
+    color: #555;
+}
+
+.equal {
+    width: 115px;
+    height: 50px;
+    box-shadow: inset -5px -5px 12px #ffffff, 5px 5px 12px rgba(0, 0, 0, .16);
+}
+
+.calculator button:not(.operator):not(.equal) {
+    transition: transform 0.1s ease, opacity 0.1s ease;
+}
+
+.calculator button:not(.operator):not(.equal):active {
+    transform: scale(0.95);
+    opacity: 0.8;
+}
+
+.calculator button.operator {
+    transition: color 0.2s ease;
+}
+
+.calculator button.operator:active {
+    color: #ff6347;
+}
+
+#outputScreen {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#outputScreen:valid {
+    background-color: #f0f8ff;
+    color: #333;
+}
+
+.calculator button:hover {
+    filter: brightness(1.1);
+}
